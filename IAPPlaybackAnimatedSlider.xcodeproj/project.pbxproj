@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B16063716F6753E009FEA23 /* GreyHeartPodcast.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16063016F6753E009FEA23 /* GreyHeartPodcast.png */; };
+		5B16063816F6753E009FEA23 /* GreyHeartPodcast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16063116F6753E009FEA23 /* GreyHeartPodcast@2x.png */; };
+		5B16063916F6753E009FEA23 /* Playback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16063216F6753E009FEA23 /* Playback@2x.png */; };
+		5B16063A16F6753E009FEA23 /* RedHeartPodcast.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16063316F6753E009FEA23 /* RedHeartPodcast.png */; };
+		5B16063B16F6753E009FEA23 /* RedHeartPodcast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16063416F6753E009FEA23 /* RedHeartPodcast@2x.png */; };
+		5B16063C16F6753E009FEA23 /* Thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16063516F6753E009FEA23 /* Thumb.png */; };
+		5B16063D16F6753E009FEA23 /* Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16063616F6753E009FEA23 /* Thumb@2x.png */; };
+		5B16064216F676A3009FEA23 /* MaxSlider.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16063E16F676A3009FEA23 /* MaxSlider.png */; };
+		5B16064316F676A3009FEA23 /* MaxSlider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16063F16F676A3009FEA23 /* MaxSlider@2x.png */; };
+		5B16064416F676A3009FEA23 /* MinSlider.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16064016F676A3009FEA23 /* MinSlider.png */; };
+		5B16064516F676A3009FEA23 /* MinSlider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16064116F676A3009FEA23 /* MinSlider@2x.png */; };
+		5BC02C5316F5A519001487C8 /* thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC02C5016F5A519001487C8 /* thumb.png */; };
 		5BD5496916ED636600ED7695 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD5496816ED636600ED7695 /* UIKit.framework */; };
 		5BD5496B16ED636600ED7695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD5496A16ED636600ED7695 /* Foundation.framework */; };
 		5BD5496D16ED636600ED7695 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD5496C16ED636600ED7695 /* CoreGraphics.framework */; };
@@ -18,9 +30,29 @@
 		5BD5497F16ED636700ED7695 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD5497E16ED636700ED7695 /* Default-568h@2x.png */; };
 		5BD5498216ED636700ED7695 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD5498116ED636700ED7695 /* ViewController.m */; };
 		5BD5498516ED636700ED7695 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BD5498316ED636700ED7695 /* ViewController.xib */; };
+		5BD5498C16ED639000ED7695 /* IAPPlaybackSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BD5498B16ED639000ED7695 /* IAPPlaybackSlider.xib */; };
+		5BD5498E16ED645A00ED7695 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD5498D16ED645A00ED7695 /* twitter.png */; };
+		5BD5499016ED646400ED7695 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD5498F16ED646400ED7695 /* facebook.png */; };
+		5BD5499216ED647D00ED7695 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD5499116ED647D00ED7695 /* play.png */; };
+		5BD5499416ED648A00ED7695 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD5499316ED648A00ED7695 /* pause.png */; };
+		5BD5499716ED65D000ED7695 /* IAPPlaybackSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD5499616ED65D000ED7695 /* IAPPlaybackSlider.m */; };
+		5BD5499B16ED6A0300ED7695 /* UIView+IAPAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD5499916ED69AA00ED7695 /* UIView+IAPAnimation.m */; };
+		5BD5499D16ED6AC800ED7695 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD5499C16ED6AC800ED7695 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B16063016F6753E009FEA23 /* GreyHeartPodcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreyHeartPodcast.png; sourceTree = "<group>"; };
+		5B16063116F6753E009FEA23 /* GreyHeartPodcast@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreyHeartPodcast@2x.png"; sourceTree = "<group>"; };
+		5B16063216F6753E009FEA23 /* Playback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Playback@2x.png"; sourceTree = "<group>"; };
+		5B16063316F6753E009FEA23 /* RedHeartPodcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedHeartPodcast.png; sourceTree = "<group>"; };
+		5B16063416F6753E009FEA23 /* RedHeartPodcast@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedHeartPodcast@2x.png"; sourceTree = "<group>"; };
+		5B16063516F6753E009FEA23 /* Thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Thumb.png; sourceTree = "<group>"; };
+		5B16063616F6753E009FEA23 /* Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb@2x.png"; sourceTree = "<group>"; };
+		5B16063E16F676A3009FEA23 /* MaxSlider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaxSlider.png; sourceTree = "<group>"; };
+		5B16063F16F676A3009FEA23 /* MaxSlider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaxSlider@2x.png"; sourceTree = "<group>"; };
+		5B16064016F676A3009FEA23 /* MinSlider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MinSlider.png; sourceTree = "<group>"; };
+		5B16064116F676A3009FEA23 /* MinSlider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MinSlider@2x.png"; sourceTree = "<group>"; };
+		5BC02C5016F5A519001487C8 /* thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb.png; sourceTree = "<group>"; };
 		5BD5496516ED636600ED7695 /* IAPPlaybackAnimatedSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAPPlaybackAnimatedSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD5496816ED636600ED7695 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BD5496A16ED636600ED7695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +69,16 @@
 		5BD5498016ED636700ED7695 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5BD5498116ED636700ED7695 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5BD5498416ED636700ED7695 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		5BD5498B16ED639000ED7695 /* IAPPlaybackSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IAPPlaybackSlider.xib; sourceTree = "<group>"; };
+		5BD5498D16ED645A00ED7695 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		5BD5498F16ED646400ED7695 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		5BD5499116ED647D00ED7695 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		5BD5499316ED648A00ED7695 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		5BD5499516ED65D000ED7695 /* IAPPlaybackSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPPlaybackSlider.h; sourceTree = "<group>"; };
+		5BD5499616ED65D000ED7695 /* IAPPlaybackSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPPlaybackSlider.m; sourceTree = "<group>"; };
+		5BD5499816ED69AA00ED7695 /* UIView+IAPAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+IAPAnimation.h"; sourceTree = "<group>"; };
+		5BD5499916ED69AA00ED7695 /* UIView+IAPAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+IAPAnimation.m"; sourceTree = "<group>"; };
+		5BD5499C16ED6AC800ED7695 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD5499D16ED6AC800ED7695 /* QuartzCore.framework in Frameworks */,
 				5BD5496916ED636600ED7695 /* UIKit.framework in Frameworks */,
 				5BD5496B16ED636600ED7695 /* Foundation.framework in Frameworks */,
 				5BD5496D16ED636600ED7695 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +99,7 @@
 		5BD5495C16ED636600ED7695 = {
 			isa = PBXGroup;
 			children = (
+				5BD5499C16ED6AC800ED7695 /* QuartzCore.framework */,
 				5BD5496E16ED636600ED7695 /* IAPPlaybackAnimatedSlider */,
 				5BD5496716ED636600ED7695 /* Frameworks */,
 				5BD5496616ED636600ED7695 /* Products */,
@@ -87,7 +131,28 @@
 				5BD5497816ED636700ED7695 /* AppDelegate.m */,
 				5BD5498016ED636700ED7695 /* ViewController.h */,
 				5BD5498116ED636700ED7695 /* ViewController.m */,
+				5BD5499816ED69AA00ED7695 /* UIView+IAPAnimation.h */,
+				5BD5499916ED69AA00ED7695 /* UIView+IAPAnimation.m */,
 				5BD5498316ED636700ED7695 /* ViewController.xib */,
+				5BD5498B16ED639000ED7695 /* IAPPlaybackSlider.xib */,
+				5BD5499516ED65D000ED7695 /* IAPPlaybackSlider.h */,
+				5BD5499616ED65D000ED7695 /* IAPPlaybackSlider.m */,
+				5B16063016F6753E009FEA23 /* GreyHeartPodcast.png */,
+				5B16063116F6753E009FEA23 /* GreyHeartPodcast@2x.png */,
+				5B16063216F6753E009FEA23 /* Playback@2x.png */,
+				5B16063316F6753E009FEA23 /* RedHeartPodcast.png */,
+				5B16063416F6753E009FEA23 /* RedHeartPodcast@2x.png */,
+				5B16063516F6753E009FEA23 /* Thumb.png */,
+				5B16063616F6753E009FEA23 /* Thumb@2x.png */,
+				5BC02C5016F5A519001487C8 /* thumb.png */,
+				5B16063E16F676A3009FEA23 /* MaxSlider.png */,
+				5B16063F16F676A3009FEA23 /* MaxSlider@2x.png */,
+				5B16064016F676A3009FEA23 /* MinSlider.png */,
+				5B16064116F676A3009FEA23 /* MinSlider@2x.png */,
+				5BD5499116ED647D00ED7695 /* play.png */,
+				5BD5499316ED648A00ED7695 /* pause.png */,
+				5BD5498D16ED645A00ED7695 /* twitter.png */,
+				5BD5498F16ED646400ED7695 /* facebook.png */,
 				5BD5496F16ED636600ED7695 /* Supporting Files */,
 			);
 			path = IAPPlaybackAnimatedSlider;
@@ -163,6 +228,23 @@
 				5BD5497D16ED636700ED7695 /* Default@2x.png in Resources */,
 				5BD5497F16ED636700ED7695 /* Default-568h@2x.png in Resources */,
 				5BD5498516ED636700ED7695 /* ViewController.xib in Resources */,
+				5BD5498C16ED639000ED7695 /* IAPPlaybackSlider.xib in Resources */,
+				5BD5498E16ED645A00ED7695 /* twitter.png in Resources */,
+				5BD5499016ED646400ED7695 /* facebook.png in Resources */,
+				5BD5499216ED647D00ED7695 /* play.png in Resources */,
+				5BD5499416ED648A00ED7695 /* pause.png in Resources */,
+				5BC02C5316F5A519001487C8 /* thumb.png in Resources */,
+				5B16063716F6753E009FEA23 /* GreyHeartPodcast.png in Resources */,
+				5B16063816F6753E009FEA23 /* GreyHeartPodcast@2x.png in Resources */,
+				5B16063916F6753E009FEA23 /* Playback@2x.png in Resources */,
+				5B16063A16F6753E009FEA23 /* RedHeartPodcast.png in Resources */,
+				5B16063B16F6753E009FEA23 /* RedHeartPodcast@2x.png in Resources */,
+				5B16063C16F6753E009FEA23 /* Thumb.png in Resources */,
+				5B16063D16F6753E009FEA23 /* Thumb@2x.png in Resources */,
+				5B16064216F676A3009FEA23 /* MaxSlider.png in Resources */,
+				5B16064316F676A3009FEA23 /* MaxSlider@2x.png in Resources */,
+				5B16064416F676A3009FEA23 /* MinSlider.png in Resources */,
+				5B16064516F676A3009FEA23 /* MinSlider@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BD5497516ED636600ED7695 /* main.m in Sources */,
+				5BD5499B16ED6A0300ED7695 /* UIView+IAPAnimation.m in Sources */,
 				5BD5497916ED636700ED7695 /* AppDelegate.m in Sources */,
 				5BD5498216ED636700ED7695 /* ViewController.m in Sources */,
+				5BD5499716ED65D000ED7695 /* IAPPlaybackSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +382,7 @@
 				5BD5498A16ED636700ED7695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,8 @@
 
 #import "ViewController.h"
 
+#import "IAPPlaybackSlider.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -19,6 +21,15 @@
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+//    IAPPlaybackSlider *slider = (IAPPlaybackSlider *)[[NSBundle mainBundle] loadNibNamed:@"IAPPlaybackSlider" owner:self options:NULL][0];
+//    [self.viewController.view addSubview:slider];
+    IAPPlaybackSlider *slider = [[IAPPlaybackSlider alloc] init];
+    [self.viewController.view addSubview:slider];
+    slider.startTime.text = @"0:01:00";
+    slider.endTime.text = @"1:00:00";
+    slider.playButton.imageView.image = [UIImage imageNamed:@"play.png"];
+    
     return YES;
 }
 
