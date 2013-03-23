@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IAPPlaybackSlider.h"
 
 @class ViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, IAPPlaybackSliderDelegate> {
+    BOOL hearted;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

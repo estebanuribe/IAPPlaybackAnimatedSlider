@@ -18,7 +18,11 @@
 		5B16064316F676A3009FEA23 /* MaxSlider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16063F16F676A3009FEA23 /* MaxSlider@2x.png */; };
 		5B16064416F676A3009FEA23 /* MinSlider.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16064016F676A3009FEA23 /* MinSlider.png */; };
 		5B16064516F676A3009FEA23 /* MinSlider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16064116F676A3009FEA23 /* MinSlider@2x.png */; };
-		5BC02C5316F5A519001487C8 /* thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC02C5016F5A519001487C8 /* thumb.png */; };
+		5B16064716F80707009FEA23 /* Playback.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B16064616F80707009FEA23 /* Playback.png */; };
+		5B1CD1E416FBF34A00D7D81F /* UIKitCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CD1E316FBF34A00D7D81F /* UIKitCategories.m */; };
+		5B1CD1E716FCA8FF00D7D81F /* UIViewController+SeethroughModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CD1E616FCA8FF00D7D81F /* UIViewController+SeethroughModalView.m */; };
+		5B1CD1EA16FCAF0C00D7D81F /* UIImage+IAPImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CD1E916FCAF0C00D7D81F /* UIImage+IAPImageTools.m */; };
+		5B23F52C16FBA3B2004DA301 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B23F52B16FBA3B2004DA301 /* Social.framework */; };
 		5BD5496916ED636600ED7695 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD5496816ED636600ED7695 /* UIKit.framework */; };
 		5BD5496B16ED636600ED7695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD5496A16ED636600ED7695 /* Foundation.framework */; };
 		5BD5496D16ED636600ED7695 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD5496C16ED636600ED7695 /* CoreGraphics.framework */; };
@@ -52,7 +56,14 @@
 		5B16063F16F676A3009FEA23 /* MaxSlider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaxSlider@2x.png"; sourceTree = "<group>"; };
 		5B16064016F676A3009FEA23 /* MinSlider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MinSlider.png; sourceTree = "<group>"; };
 		5B16064116F676A3009FEA23 /* MinSlider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MinSlider@2x.png"; sourceTree = "<group>"; };
-		5BC02C5016F5A519001487C8 /* thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb.png; sourceTree = "<group>"; };
+		5B16064616F80707009FEA23 /* Playback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Playback.png; sourceTree = "<group>"; };
+		5B1CD1E216FBF34A00D7D81F /* UIKitCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitCategories.h; sourceTree = "<group>"; };
+		5B1CD1E316FBF34A00D7D81F /* UIKitCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKitCategories.m; sourceTree = "<group>"; };
+		5B1CD1E516FCA8FF00D7D81F /* UIViewController+SeethroughModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SeethroughModalView.h"; sourceTree = "<group>"; };
+		5B1CD1E616FCA8FF00D7D81F /* UIViewController+SeethroughModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SeethroughModalView.m"; sourceTree = "<group>"; };
+		5B1CD1E816FCAF0C00D7D81F /* UIImage+IAPImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IAPImageTools.h"; sourceTree = "<group>"; };
+		5B1CD1E916FCAF0C00D7D81F /* UIImage+IAPImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IAPImageTools.m"; sourceTree = "<group>"; };
+		5B23F52B16FBA3B2004DA301 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		5BD5496516ED636600ED7695 /* IAPPlaybackAnimatedSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAPPlaybackAnimatedSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD5496816ED636600ED7695 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BD5496A16ED636600ED7695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B23F52C16FBA3B2004DA301 /* Social.framework in Frameworks */,
 				5BD5499D16ED6AC800ED7695 /* QuartzCore.framework in Frameworks */,
 				5BD5496916ED636600ED7695 /* UIKit.framework in Frameworks */,
 				5BD5496B16ED636600ED7695 /* Foundation.framework in Frameworks */,
@@ -99,6 +111,9 @@
 		5BD5495C16ED636600ED7695 = {
 			isa = PBXGroup;
 			children = (
+				5B1CD1E216FBF34A00D7D81F /* UIKitCategories.h */,
+				5B1CD1E316FBF34A00D7D81F /* UIKitCategories.m */,
+				5B23F52B16FBA3B2004DA301 /* Social.framework */,
 				5BD5499C16ED6AC800ED7695 /* QuartzCore.framework */,
 				5BD5496E16ED636600ED7695 /* IAPPlaybackAnimatedSlider */,
 				5BD5496716ED636600ED7695 /* Frameworks */,
@@ -137,14 +152,18 @@
 				5BD5498B16ED639000ED7695 /* IAPPlaybackSlider.xib */,
 				5BD5499516ED65D000ED7695 /* IAPPlaybackSlider.h */,
 				5BD5499616ED65D000ED7695 /* IAPPlaybackSlider.m */,
+				5B1CD1E816FCAF0C00D7D81F /* UIImage+IAPImageTools.h */,
+				5B1CD1E916FCAF0C00D7D81F /* UIImage+IAPImageTools.m */,
+				5B1CD1E516FCA8FF00D7D81F /* UIViewController+SeethroughModalView.h */,
+				5B1CD1E616FCA8FF00D7D81F /* UIViewController+SeethroughModalView.m */,
 				5B16063016F6753E009FEA23 /* GreyHeartPodcast.png */,
 				5B16063116F6753E009FEA23 /* GreyHeartPodcast@2x.png */,
+				5B16064616F80707009FEA23 /* Playback.png */,
 				5B16063216F6753E009FEA23 /* Playback@2x.png */,
 				5B16063316F6753E009FEA23 /* RedHeartPodcast.png */,
 				5B16063416F6753E009FEA23 /* RedHeartPodcast@2x.png */,
 				5B16063516F6753E009FEA23 /* Thumb.png */,
 				5B16063616F6753E009FEA23 /* Thumb@2x.png */,
-				5BC02C5016F5A519001487C8 /* thumb.png */,
 				5B16063E16F676A3009FEA23 /* MaxSlider.png */,
 				5B16063F16F676A3009FEA23 /* MaxSlider@2x.png */,
 				5B16064016F676A3009FEA23 /* MinSlider.png */,
@@ -233,7 +252,6 @@
 				5BD5499016ED646400ED7695 /* facebook.png in Resources */,
 				5BD5499216ED647D00ED7695 /* play.png in Resources */,
 				5BD5499416ED648A00ED7695 /* pause.png in Resources */,
-				5BC02C5316F5A519001487C8 /* thumb.png in Resources */,
 				5B16063716F6753E009FEA23 /* GreyHeartPodcast.png in Resources */,
 				5B16063816F6753E009FEA23 /* GreyHeartPodcast@2x.png in Resources */,
 				5B16063916F6753E009FEA23 /* Playback@2x.png in Resources */,
@@ -245,6 +263,7 @@
 				5B16064316F676A3009FEA23 /* MaxSlider@2x.png in Resources */,
 				5B16064416F676A3009FEA23 /* MinSlider.png in Resources */,
 				5B16064516F676A3009FEA23 /* MinSlider@2x.png in Resources */,
+				5B16064716F80707009FEA23 /* Playback.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +279,9 @@
 				5BD5497916ED636700ED7695 /* AppDelegate.m in Sources */,
 				5BD5498216ED636700ED7695 /* ViewController.m in Sources */,
 				5BD5499716ED65D000ED7695 /* IAPPlaybackSlider.m in Sources */,
+				5B1CD1E416FBF34A00D7D81F /* UIKitCategories.m in Sources */,
+				5B1CD1E716FCA8FF00D7D81F /* UIViewController+SeethroughModalView.m in Sources */,
+				5B1CD1EA16FCAF0C00D7D81F /* UIImage+IAPImageTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

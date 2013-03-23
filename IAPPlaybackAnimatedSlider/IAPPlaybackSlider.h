@@ -8,16 +8,40 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IAPPlaybackSlider : UIView
+@protocol IAPPlaybackSliderDelegate <NSObject>
+- (NSTimeInterval)remainingTime;
+- (NSTimeInterval)starterTime;
+- (void)setStarterTime:(NSTimeInterval)startertime;
+- (void)setHearted:(BOOL)hearted;
+- (BOOL)hearted;
+@end
 
-@property (nonatomic) IBOutlet UIButton *playButton;
-@property (nonatomic) UILabel           *startTime;
-@property (nonatomic) UILabel           *endTime;
-@property (nonatomic) IBOutlet UIView   *playbackControlsView;
-@property (nonatomic) UILabel           *currentTime;
-@property (nonatomic) UISlider          *playbackSlider;
+@interface IAPPlaybackSlider : UIView {
+    UIActivityViewController *activityViewController;
+    UIImageView              *activityViewImageView;
+    UIView                   *shareHeartView;
+    UIView                   *playbackControlsView;
+    UIButton                 *playButton;
+    UILabel                  *startTime;
+    UILabel                  *endTime;
+    UILabel                  *currentTime;
+    UISlider                 *playbackSlider;
+    NSLayoutConstraint       *playbackControlsViewWidthConstraint;
+    NSLayoutConstraint       *heartShareViewWidthConstraint;
+    NSLayoutConstraint       *heartButtonWidthConstraint;
+    NSLayoutConstraint       *shareButtonWidthConstraint;
+    UIButton                 *shareButton;
+    UIButton                 *heartButton;
+}
+
+@property (nonatomic, weak) NSObject<IAPPlaybackSliderDelegate> *delegate;
+
++ (IAPPlaybackSlider *)playbackSlider;
 
 - (IBAction)rolloutView:(id)sender;
 - (IBAction)rollbackView:(id)sender;
 
+- (IBAction)sharePodcast:(id)sender;
+
+- (IBAction)toggleHeart:(id)sender;
 @end

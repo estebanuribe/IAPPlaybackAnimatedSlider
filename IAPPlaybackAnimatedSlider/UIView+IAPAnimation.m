@@ -164,6 +164,7 @@
     }];*/
     
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+        NSLog(@"new frame: %@", NSStringFromCGRect(frame));
         self.frame = frame;
         if(rollOutAnimations) rollOutAnimations();
         [self layoutIfNeeded];

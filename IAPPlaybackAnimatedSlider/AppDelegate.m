@@ -20,15 +20,25 @@
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
+    self.viewController.view.backgroundColor = [UIColor orangeColor];
+//    [self.viewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.window makeKeyAndVisible];
     
 //    IAPPlaybackSlider *slider = (IAPPlaybackSlider *)[[NSBundle mainBundle] loadNibNamed:@"IAPPlaybackSlider" owner:self options:NULL][0];
 //    [self.viewController.view addSubview:slider];
     IAPPlaybackSlider *slider = [[IAPPlaybackSlider alloc] init];
     [self.viewController.view addSubview:slider];
-    slider.startTime.text = @"0:01:00";
-    slider.endTime.text = @"1:00:00";
-    slider.playButton.imageView.image = [UIImage imageNamed:@"play.png"];
+    hearted = NO;
+    [slider setDelegate:self];
+    
+    NSArray *constraints = @[
+        [NSLayoutConstraint constraintWithItem:slider attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.viewController.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:16],
+        [NSLayoutConstraint constraintWithItem:slider attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.viewController.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0],
+        [NSLayoutConstraint constraintWithItem:slider attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:slider.frame.size.height],
+        [NSLayoutConstraint constraintWithItem:slider attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:slider.frame.size.width]
+        ];
+    
+    [self.viewController.view addConstraints:constraints];
     
     return YES;
 }
@@ -58,6 +68,23 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - IAPPlaybackSlider Delegate
+- (NSTimeInterval)starterTime {
+    return 0.0;
+}
+
+- (NSTimeInterval)remainingTime {
+    return 60.0*60.0;
+}
+
+- (BOOL)hearted {
+    return hearted;
+}
+
+- (void)setHearted:(BOOL)heart {
+    hearted = heart;
 }
 
 @end
