@@ -8,12 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class IAPPlaybackSlider;
+
 @protocol IAPPlaybackSliderDelegate <NSObject>
+@required
 - (NSTimeInterval)remainingTime;
 - (NSTimeInterval)starterTime;
-- (void)setStarterTime:(NSTimeInterval)startertime;
+- (void)playButtonPressed:(IAPPlaybackSlider *)slider;
 - (void)setHearted:(BOOL)hearted;
 - (BOOL)hearted;
+@optional
+- (void)setStarterTime:(NSTimeInterval)startertime;
+- (NSString *)socialDescription;
+- (NSString *)socialDescriptionForService:(NSString *)serviceType;
 @end
 
 @interface IAPPlaybackSlider : UIView {
@@ -22,6 +29,7 @@
     UIView                   *shareHeartView;
     UIView                   *playbackControlsView;
     UIButton                 *playButton;
+    UIButton                 *playbackControlsViewExpander;
     UILabel                  *startTime;
     UILabel                  *endTime;
     UILabel                  *currentTime;
@@ -35,6 +43,8 @@
 }
 
 @property (nonatomic, weak) NSObject<IAPPlaybackSliderDelegate> *delegate;
+@property (nonatomic, readonly) BOOL playbackControlsRolledOut;
+@property (nonatomic, readonly) BOOL playing;
 
 + (IAPPlaybackSlider *)playbackSlider;
 

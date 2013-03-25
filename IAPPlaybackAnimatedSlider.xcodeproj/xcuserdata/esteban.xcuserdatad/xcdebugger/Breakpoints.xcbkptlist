@@ -59,19 +59,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "IAPPlaybackAnimatedSlider/IAPPlaybackSlider.m"
-         timestampString = "385699208.949072"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "192"
-         endingLineNumber = "192"
-         landmarkName = "-rolloutView:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "IAPPlaybackAnimatedSlider/UIView+IAPAnimation.m"
          timestampString = "385402140.373263"
          startingColumnNumber = "9223372036854775807"
@@ -99,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IAPPlaybackAnimatedSlider/IAPPlaybackSlider.m"
-         timestampString = "385699208.949072"
+         timestampString = "385714951.674973"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "136"
-         endingLineNumber = "136"
+         startingLineNumber = "141"
+         endingLineNumber = "141"
          landmarkName = "-rolloutView:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -125,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IAPPlaybackAnimatedSlider/IAPPlaybackSlider.m"
-         timestampString = "385699208.949072"
+         timestampString = "385714991.078761"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "162"
-         endingLineNumber = "162"
+         startingLineNumber = "164"
+         endingLineNumber = "164"
          landmarkName = "-rolloutView:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -138,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IAPPlaybackAnimatedSlider/IAPPlaybackSlider.m"
-         timestampString = "385699208.949072"
+         timestampString = "385714951.674973"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
+         startingLineNumber = "100"
+         endingLineNumber = "100"
          landmarkName = "-setStarterTime"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IAPPlaybackAnimatedSlider/IAPPlaybackSlider.m"
-         timestampString = "385699208.949072"
+         timestampString = "385714951.674973"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "111"
-         endingLineNumber = "111"
+         startingLineNumber = "115"
+         endingLineNumber = "115"
          landmarkName = "-setRemainingTime"
          landmarkType = "5">
       </FileBreakpoint>
@@ -164,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IAPPlaybackAnimatedSlider/IAPPlaybackSlider.m"
-         timestampString = "385700646.551868"
+         timestampString = "385916849.67587"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "239"
-         endingLineNumber = "239"
+         startingLineNumber = "246"
+         endingLineNumber = "246"
          landmarkName = "-toggleHeart:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +164,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IAPPlaybackAnimatedSlider/IAPPlaybackSlider.m"
-         timestampString = "385700646.551868"
+         timestampString = "385916849.67587"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "237"
-         endingLineNumber = "237"
+         startingLineNumber = "244"
+         endingLineNumber = "244"
          landmarkName = "-toggleHeart:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -196,6 +183,32 @@
          startingLineNumber = "87"
          endingLineNumber = "87"
          landmarkName = "-setHearted:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "IAPPlaybackAnimatedSlider/AppDelegate.m"
+         timestampString = "385715016.393955"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "95"
+         endingLineNumber = "95"
+         landmarkName = "-playButtonPressed:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "IAPPlaybackAnimatedSlider/IAPPlaybackSlider.m"
+         timestampString = "385919059.120833"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "274"
+         endingLineNumber = "274"
+         landmarkName = "-playButtonPressed:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

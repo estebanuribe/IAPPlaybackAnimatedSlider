@@ -20,6 +20,7 @@ static IAPPlaybackSlider *playbackSlider = nil;
 @interface IAPPlaybackSlider (PRIVATECLASSMETHODS)
 - (void)setupPlaybackControls;
 - (void)setupShareHeartButtons;
+- (IBAction)playButtonPressed:(id)sender;
 @end
 
 @implementation IAPPlaybackSlider
@@ -35,14 +36,17 @@ static IAPPlaybackSlider *playbackSlider = nil;
     CGRect frame = CGRectMake(16, 0, 288.0, 44.0);
     self = [super initWithFrame:frame];
     if (self) {
+        _playbackControlsRolledOut = NO;
+        _playing = NO;
         [self setTranslatesAutoresizingMaskIntoConstraints:NO];
         self.backgroundColor = [UIColor lightGrayColor];
-        self->playButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        self->playButton.frame = CGRectMake(4.0, 0, 42.0, 44.0);
-        [self->playButton setImage:[UIImage imageNamed:@"Playback.png"] forState:UIControlStateNormal];
-        self->playButton.backgroundColor = [UIColor clearColor];
-        [self->playButton addTarget:self action:@selector(rolloutView:) forControlEvents:UIControlEventTouchDown];
-        [self addSubview:self->playButton];
+        playButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        playButton.frame = CGRectMake(4.0, 0, 42.0, 44.0);
+        [playButton setImage:[UIImage imageNamed:@"Playback.png"] forState:UIControlStateNormal];
+        playButton.backgroundColor = [UIColor clearColor];
+        [playButton addTarget:self action:@selector(playButtonPressed:) forControlEvents:UIControlEventTouchDown];
+        [playButton addTarget:self action:@selector(rolloutView:) forControlEvents:UIControlEventTouchDown];
+        [self addSubview:playButton];
         self->playbackControlsView = [[UIView alloc] initWithFrame:CGRectMake(46.0, 0, 50.0, 44.0)];
         self->playbackControlsView.backgroundColor = [UIColor clearColor];
         [self->playbackControlsView setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -130,6 +134,7 @@ static IAPPlaybackSlider *playbackSlider = nil;
 }
 
 - (IBAction)rolloutView:(id)sender {
+    if (_playbackControlsRolledOut) return;
 //    CGRect frame = self.frame;
 //    frame.size.width = self.superview.frame.size.width - 10;
     
@@ -141,9 +146,6 @@ static IAPPlaybackSlider *playbackSlider = nil;
     self->playbackSlider.minimumValue = 0.0;
     self->playbackSlider.value = 10.0;
     
-    UIButton *trigger = (UIButton *)sender;
-    trigger.enabled = NO;
-        
     void (^completion)(BOOL) = nil;
     
     CGFloat heartShareSmallWidth = 0;
@@ -167,6 +169,9 @@ static IAPPlaybackSlider *playbackSlider = nil;
         self->playbackSlider.hidden = NO;
         self->startTime.frame = self->endTime.frame;
         self->playbackSlider.value = 50.0;
+        
+        shareButton.enabled = NO;
+        heartButton.enabled = NO;
         [self updateConstraintsIfNeeded];
     };
     
@@ -182,34 +187,37 @@ static IAPPlaybackSlider *playbackSlider = nil;
     };
     
     void (^rollBackCompletion)(BOOL) = ^(BOOL finished) {
-        trigger.enabled = YES;
+        _playbackControlsRolledOut = NO;
+        shareButton.enabled = YES;
+        heartButton.enabled = YES;
+
+        if (!self.playbackControlsRolledOut)
+            [playButton addTarget:self action:@selector(rolloutView:) forControlEvents:UIControlEventTouchDown];
     };
     
 //    frame = self.playbackControlsView.frame;
     //[self removeConstraints:self.playbackControlsView.constraints];
+    
+    [playButton removeTarget:self action:@selector(rolloutView:) forControlEvents:UIControlEventTouchDown];
     BOOL rollOutAndBack = YES;
     if (!rollOutAndBack) {
-/*        [self.playbackControlsView rollOutViewToFrame:frame
-               rollOutAnimations:animations
-               rollOutCompletion:completion];*/
         [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
             if(animations) animations();
             [self layoutIfNeeded];
         } completion:^(BOOL finished) {
-            ;        }];
-/*        [self.playbackControlsView rollOutViewToFrame:frame
-                                    rollOutAnimations:animations
-                                    rollOutCompletion:completion];*/
+            _playbackControlsRolledOut = YES;
+            shareButton.enabled = YES;
+            heartButton.enabled = YES;
+        }];
     }
     else {
-        
-//        __block CGRect saveFrame = self.frame;
         [self setNeedsUpdateConstraints];
         [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionAllowUserInteraction
                          animations:^{
                              animations();
                              [self layoutIfNeeded];
                          } completion:^(BOOL finished) {
+                             _playbackControlsRolledOut = YES;
                              if (finished) {
                                  [UIView animateWithDuration:0.5 delay:2.0 options:UIViewAnimationOptionAllowUserInteraction
                                                   animations:^{
@@ -231,7 +239,6 @@ static IAPPlaybackSlider *playbackSlider = nil;
 
 - (IBAction)toggleHeart:(id)sender {
     if (self.delegate) {
-        NSLog(@"toggle");
         BOOL heart = !self.delegate.hearted;
         [heartButton setSelected:heart];
         [self.delegate setHearted:heart];
@@ -247,43 +254,46 @@ static IAPPlaybackSlider *playbackSlider = nil;
 */
 
 - (IBAction)sharePodcast:(id)sender {
-
-    if (!activityViewImageView) {
-        CGRect viewFrame = self.superview.frame;
-        viewFrame.origin = CGPointMake(0, 0);
-        activityViewImageView = [[UIImageView alloc] initWithFrame:viewFrame];
-        [activityViewImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    }
+    NSArray *shareActivities = nil;
     
-    if (!activityViewController) {
-        
-        NSArray *shareActivities = @[@"blah blah blah"];
-        NSArray *serviceActivities = @[];
-        activityViewController = [[UIActivityViewController alloc] initWithActivityItems:shareActivities applicationActivities:nil];
-//        [activityViewController.view addSubview:activityViewImageView];
-//        [activityViewController.view sendSubviewToBack:activityViewImageView];
-        activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-        activityViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
-//        activityViewController.view.backgroundColor = [UIColor grayColor];
-//        activityViewController.view.alpha = 0.5;
-    }
+    if(self.delegate) shareActivities = @[self.delegate.socialDescription];
+    else shareActivities = @[@"I REGRET NOTHING!"];
+    activityViewController = [[UIActivityViewController alloc] initWithActivityItems:shareActivities applicationActivities:nil];
+    activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    activityViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    activityViewController.completionHandler =  ^(NSString *activityType, BOOL completed) {
+        completed?NSLog(@"Finished activity: %@", activityType):NSLog(@"cancelled"); };
     
-//    activityViewImageView.image = [UIImage imageWithView:self.superview];
-
     UIViewController *rvc = [self firstAvailableUIViewController];
     [rvc presentViewController:activityViewController animated:YES completion:^{
-/*        [activityViewController.view addSubview:activityViewImageView];
-        [activityViewController.view sendSubviewToBack:activityViewImageView];
-        activityViewImageView.image = [UIImage imageWithView:self.superview];*/
-
+        activityViewController = nil;
     }];
-//    [activityViewController.view addSubview:self.superview];
-//    [activityViewController.view sendSubviewToBack:self.superview];
+}
 
+- (IBAction)playButtonPressed:(id)sender {
+    if (self.delegate) {
+        [self.delegate playButtonPressed:self];
+    }
 }
 
 #pragma mark - Private Class Methods
 - (void)setupPlaybackControls {
+    
+    CGRect frame = playbackControlsView.frame;
+    frame.origin = CGPointMake(0, 0);
+    playbackControlsViewExpander = [[UIButton alloc] initWithFrame:frame];
+    [playbackControlsViewExpander setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [playbackControlsViewExpander setBackgroundColor:[UIColor clearColor]];
+    [playbackControlsViewExpander addTarget:self action:@selector(rolloutView:) forControlEvents:UIControlEventTouchDown];
+    [playbackControlsView addSubview:playbackControlsViewExpander];
+    
+    NSDictionary *views = @{@"view": playbackControlsViewExpander};
+    [playbackControlsView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[view]|" options:0 metrics:nil views:views]];
+    [playbackControlsView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[view]|" options:0 metrics:nil views:views]];
+    
+    
+    [playbackControlsView bringSubviewToFront:playbackControlsViewExpander];
+    
     self->startTime = [[UILabel alloc] initWithFrame:CGRectMake(0,0, 50,21)];
     [self->startTime setFont:[UIFont boldSystemFontOfSize:12.0]];
     [self->startTime setTextColor:[UIColor darkGrayColor]];
@@ -305,7 +315,7 @@ static IAPPlaybackSlider *playbackSlider = nil;
     self->playbackSlider = [[UISlider alloc] initWithFrame:CGRectMake(0, 4, 44, 23)];
     self->playbackSlider.hidden = YES;
     [self->playbackSlider setTranslatesAutoresizingMaskIntoConstraints:NO];
-    UIEdgeInsets edgeInsets;
+    UIEdgeInsets edgeInsets = UIEdgeInsetsZero;
     edgeInsets.left = 5.0;
     edgeInsets.right = 5.0;
     UIImage *leftCap = [[UIImage imageNamed:@"MaxSlider.png"] resizableImageWithCapInsets:edgeInsets];

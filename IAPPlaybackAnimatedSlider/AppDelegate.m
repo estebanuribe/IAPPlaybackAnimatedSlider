@@ -26,7 +26,7 @@
     
 //    IAPPlaybackSlider *slider = (IAPPlaybackSlider *)[[NSBundle mainBundle] loadNibNamed:@"IAPPlaybackSlider" owner:self options:NULL][0];
 //    [self.viewController.view addSubview:slider];
-    IAPPlaybackSlider *slider = [[IAPPlaybackSlider alloc] init];
+    IAPPlaybackSlider *slider = [IAPPlaybackSlider playbackSlider];
     [self.viewController.view addSubview:slider];
     hearted = NO;
     [slider setDelegate:self];
@@ -85,6 +85,14 @@
 
 - (void)setHearted:(BOOL)heart {
     hearted = heart;
+}
+
+- (NSString *)socialDescription {
+    return @"This podcast is amazing!";
+}
+
+- (void)playButtonPressed:(IAPPlaybackSlider *)slider {
+    NSLog(@"Yay I pushed a button!");
 }
 
 @end
