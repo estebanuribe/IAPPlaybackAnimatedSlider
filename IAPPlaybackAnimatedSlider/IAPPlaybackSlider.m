@@ -33,7 +33,7 @@ static IAPPlaybackSlider *playbackSlider = nil;
 }
 
 - (id)init {
-    CGRect frame = CGRectMake(16, 0, 288.0, 44.0);
+    CGRect frame = CGRectMake(24, 0, 272.0, 44.0);
     self = [super initWithFrame:frame];
     if (self) {
         _playbackControlsRolledOut = NO;
@@ -254,20 +254,9 @@ static IAPPlaybackSlider *playbackSlider = nil;
 */
 
 - (IBAction)sharePodcast:(id)sender {
-    NSArray *shareActivities = nil;
-    
-    if(self.delegate) shareActivities = @[self.delegate.socialDescription];
-    else shareActivities = @[@"I REGRET NOTHING!"];
-    activityViewController = [[UIActivityViewController alloc] initWithActivityItems:shareActivities applicationActivities:nil];
-    activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    activityViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    activityViewController.completionHandler =  ^(NSString *activityType, BOOL completed) {
-        completed?NSLog(@"Finished activity: %@", activityType):NSLog(@"cancelled"); };
-    
-    UIViewController *rvc = [self firstAvailableUIViewController];
-    [rvc presentViewController:activityViewController animated:YES completion:^{
-        activityViewController = nil;
-    }];
+    if (self.delegate) {
+        [self.delegate share];
+    }
 }
 
 - (IBAction)playButtonPressed:(id)sender {

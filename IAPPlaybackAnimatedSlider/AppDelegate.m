@@ -40,6 +40,8 @@
     
     [self.viewController.view addConstraints:constraints];
     
+    
+
     return YES;
 }
 
@@ -93,6 +95,16 @@
 
 - (void)playButtonPressed:(IAPPlaybackSlider *)slider {
     NSLog(@"Yay I pushed a button!");
+}
+
+- (void)share {
+    NSArray *shareActivities = nil;
+    
+    shareActivities = @[@"I REGRET NOTHING!"];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:shareActivities applicationActivities:nil];
+    
+    [self.viewController presentViewController:activityViewController animated:YES completion:nil];
+
 }
 
 @end

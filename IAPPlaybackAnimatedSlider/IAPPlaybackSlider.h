@@ -17,6 +17,7 @@
 - (void)playButtonPressed:(IAPPlaybackSlider *)slider;
 - (void)setHearted:(BOOL)hearted;
 - (BOOL)hearted;
+- (void)share;
 @optional
 - (void)setStarterTime:(NSTimeInterval)startertime;
 - (NSString *)socialDescription;
